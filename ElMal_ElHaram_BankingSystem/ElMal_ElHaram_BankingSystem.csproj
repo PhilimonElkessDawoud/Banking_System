@@ -115,6 +115,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserOperations.resx">
       <DependentUpon>UserOperations.cs</DependentUpon>
@@ -140,6 +141,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Persons.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\latttt.png" />
+    <None Include="Resources\im81.jpg" />
+    <None Include="Resources\im61.png" />
+    <None Include="Resources\im12.png" />
+    <None Include="Resources\im7.jpg" />
+    <None Include="Resources\im6.png" />
+    <None Include="Resources\im8.jpg" />
+    <None Include="Resources\money-png-icon-11111.jpg" />
+    <None Include="Resources\im9.jpg" />
+    <None Include="Resources\im11.png" />
+    <None Include="Resources\im1.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
