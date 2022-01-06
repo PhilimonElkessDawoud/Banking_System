@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Certificates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Certificates.Designer.cs">
+      <DependentUpon>Certificates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -75,13 +81,31 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="InvestmentCertificate.cs" />
+    <Compile Include="Operations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations.Designer.cs">
+      <DependentUpon>Operations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserOperations.Designer.cs">
+      <DependentUpon>UserOperations.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Certificates.resx">
+      <DependentUpon>Certificates.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations.resx">
+      <DependentUpon>Operations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +116,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserOperations.resx">
+      <DependentUpon>UserOperations.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
