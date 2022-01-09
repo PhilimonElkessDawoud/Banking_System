@@ -81,6 +81,12 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="InvestmentCertificate.cs" />
+    <Compile Include="NewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewClient.Designer.cs">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Operations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teller.Designer.cs">
+      <DependentUpon>Teller.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserOperations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,9 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewClient.resx">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operations.resx">
       <DependentUpon>Operations.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +132,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Teller.resx">
+      <DependentUpon>Teller.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserOperations.resx">
       <DependentUpon>UserOperations.cs</DependentUpon>
     </EmbeddedResource>
