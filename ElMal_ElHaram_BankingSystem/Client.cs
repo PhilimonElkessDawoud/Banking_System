@@ -18,8 +18,9 @@ namespace ElMal_ElHaram_BankingSystem
         private string phonenumber;
         private string address;
         private string gender;
-        private decimal balance;
+        private decimal balance; // helloo 
         protected string accounttype;
+        protected int x;
 
         static Random random = new Random();
         public Client() {}
