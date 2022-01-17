@@ -8,7 +8,7 @@ namespace ElMal_ElHaram_BankingSystem
 {
     internal class Client
     {
-        private int clientid;
+        private string clientid;
         private string firstname;
         private string middlename;
         private string lastname;
@@ -17,16 +17,17 @@ namespace ElMal_ElHaram_BankingSystem
         private string password;
         private string phonenumber;
         private string address;
-        private string gender;
+        private char gender;
         private decimal balance; // helloo 
         protected string accounttype;
-        protected int x;
 
         static Random random = new Random();
         public Client() {}
-        public Client(int clientid, string firstname, string middlename, string lastname, int birthyear, int birthmonth, int birthday, string email, string phonenumber,
+        public Client(string clientid, string firstname, string middlename, string lastname, int birthyear, int birthmonth, int birthday, string email,
+            
+            string phonenumber, string address, char gender, decimal balance)
 
-             string address, string gender, decimal balance)
+
         {
             this.clientid = clientid;
             this.firstname = firstname;
@@ -41,7 +42,7 @@ namespace ElMal_ElHaram_BankingSystem
             this.balance = balance;
             this.accounttype = "Poor";
         }
-        public int ClientID
+        public string ClientID
         {
             get { return clientid; }
         }
@@ -85,7 +86,7 @@ namespace ElMal_ElHaram_BankingSystem
             set { address = value; }
             get { return address; }
         }
-        public string Gender
+        public char Gender
         {
             set { gender = value; }
             get { return gender; }
@@ -136,8 +137,8 @@ namespace ElMal_ElHaram_BankingSystem
     internal class Premium : Client
     {
         public Premium() {}
-        public Premium(int clientid, string firstname, string middlename, string lastname, int birthyear, int birthmonth, int birthday, string email, string phonenumber,
-            string address, string gender, decimal balance)
+        public Premium(string clientid, string firstname, string middlename, string lastname, int birthyear, int birthmonth, int birthday, string email, string phonenumber,
+            string address, char gender, decimal balance)
 
             : base(clientid, firstname, middlename, lastname, birthyear, birthmonth, birthday, email, phonenumber,address,gender, balance)
 
@@ -147,26 +148,19 @@ namespace ElMal_ElHaram_BankingSystem
 
         public sealed override decimal AddInterestToSavingsAccount(decimal balance)
         {
-            return balance + 0.09m * balance;
+            return balance + (0.09m * balance);
         }
     }
     internal class Minor : Client
     {
-        private bool ssnumber; // Social Security Number
         public Minor() {}
-        public Minor(int clientid, string firstname, string middlename, string lastname, int birthyear, int birthmonth, int birthday, string email, string phonenumber,
-            string address, string gender, decimal balance, bool ssnumber)
+        public Minor(string clientid, string firstname, string middlename, string lastname, int birthyear, int birthmonth, int birthday, string email,
+            string phonenumber, string address, char gender, decimal balance)
 
             : base(clientid, firstname, middlename, lastname, birthyear, birthmonth, birthday, email, phonenumber, address, gender, balance)
 
         {
             this.accounttype = "Minor";
-            this.ssnumber = ssnumber;
-        }
-        public bool SSN
-        {
-            set { ssnumber = value; }
-            get { return ssnumber; }
         }
     }
 }
